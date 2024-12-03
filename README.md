@@ -3,7 +3,9 @@
 ### Introducere
 
 ---
-Acesta este minunatul meu proiect la robotică
+Acesta este minunatul meu proiect la robotică.
+
+
 
 ### Descriere generală
 
