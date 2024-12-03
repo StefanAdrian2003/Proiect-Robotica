@@ -5,3 +5,7 @@
 ### Introducere
 
 ---
+
+### Descriere generală
+
+---
