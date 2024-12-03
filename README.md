@@ -1,7 +1,5 @@
 ## Romică
 
----
-
 ### Introducere
 
 ---
