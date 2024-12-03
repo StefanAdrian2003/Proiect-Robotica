@@ -4,9 +4,7 @@
 
 ---
 Acesta este minunatul meu proiect la robotică.
-
-
-
+<br>
 ### Descriere generală
 
 ---
