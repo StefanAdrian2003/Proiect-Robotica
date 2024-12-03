@@ -1,7 +1,7 @@
-## <u>Nume proiect</u>
+## Nume proiect
 
 ---
 
-### <u>Introducere</u>
+### Introducere
 
 ---
