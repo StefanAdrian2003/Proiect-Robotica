@@ -1,2 +1,7 @@
-# Proiect Robotica
- 
+## Romică
+
+---
+
+### Introducere
+
+---
