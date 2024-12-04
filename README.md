@@ -31,14 +31,11 @@ TBD - This section will document the robot's performance, including its speed, r
 TBD - The conclusions will reflect on the challenges faced, solutions implemented, and potential improvements.
 
 ## Journal
-### Day 1 (02.12.2024):
-Started the documentation for the project. So far so good right now.
-
-### Day 2 (04.12.2024):
-Added the license for the project. Might change it later.
+### Day 1 (04.12.2024):
+Started the documentation.
 
 ## Source Code
 TBD
 
 ## Resources
-[Embassy](https://embassy.dev/)
+TBD
