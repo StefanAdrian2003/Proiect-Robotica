@@ -56,7 +56,12 @@ Block Diagram
     The servo motors are used for precise movement, controlled via PWM signals from the Arduino. They are ideal for applications requiring fine control.
 
 ## Hardware Design
-TBD - This section will contain data about the components used in creating the project.
+### Bill of Materials (BoM)
+| Component       | Quantity       | Description       | Datasheet    |
+|----------------|----------------|----------------|----------------|
+| Row 1, Column 1 | Row 1, Column 2 | Row 1, Column 3 | Row 1, Column 3 |
+| Row 2, Column 1 | Row 2, Column 2 | Row 2, Column 3 | Row 1, Column 3 |
+| Row 3, Column 1 | Row 3, Column 2 | Row 3, Column 3 | Row 1, Column 3 |
   
 ## Software Design
 The software design for Romică is centered around efficient, reliable communication between the robot's hardware components and the end user. The project is developed using PlatformIO on Visual Studio Code, a robust and feature-rich environment for embedded systems development.
