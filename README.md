@@ -17,7 +17,7 @@ This project combines hardware and software design to develop an accessible and 
 
 ## Overview
 Block Diagram
-[Block Diagram](https://github.com/StefanAdrian2003/Proiect-Robotica/blob/main/Images/Block_Diagram.png)
+![Block Diagram](https://github.com/StefanAdrian2003/Proiect-Robotica/blob/main/Images/Block_Diagram.png)
 
 ## Hardware Design
 TBD - This section will contain data about the components used in creating the project.
