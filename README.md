@@ -84,8 +84,9 @@ Block Diagram
 ![CircuitPhoto1](https://github.com/StefanAdrian2003/Proiect-Robotica/blob/main/Images/Circuit%20-%20photo2.jpg)
 
 ### Hardware Setup
-| Component       | Quantity       | Description       |
+| Component       | Pin Name       | Connected to      |
 |----------------|----------------|----------------|
+|Servo Motor |   |      |
 
 ## Software Design
 The software design for Romică is centered around efficient, reliable communication between the robot's hardware components and the end user. The project is developed using PlatformIO on Visual Studio Code, a robust and feature-rich environment for embedded systems development.
