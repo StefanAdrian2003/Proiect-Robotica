@@ -38,15 +38,18 @@ Block Diagram
    The ultrasonic sensor measures distance by sending ultrasonic waves and detecting their reflection. It is used for obstacle detection and navigation.
 
 6. **LCD Display**  
-   The LCD display is used to provide visual feedback, such as sensor readings or status messages. It connects to the Arduino and communicates via I2C for simplified wiring.
+   The LCD display is used to provide visual feedback, such as sensor readings or status messages. It connects to the Arduino using digital pins for communication. The control includes RS, E, and data pins (D4-D7), with additional pins for contrast and backlight.
 
-7. **Speaker**  
+7. **Potentiometer**  
+   The potentiometer is used to adjust the contrast of the LCD display. By rotating the knob, the user can control the voltage sent to the LCD’s contrast pin, ensuring optimal visibility of the displayed text.
+
+8. **Speaker**  
    The Speaker is used to emit sound signals, acting as an alert mechanism or for providing audio feedback in the system.
 
-8. **9V Batteries**  
+9. **9V Batteries**  
    The 9V batteries supply power to the L293D motor driver module.
 
-9. **1.5V Batteries**
+10. **1.5V Batteries**
    The 1.5V batteries supply power to the system, including the L293D motor driver module and microcontroller.
 
 11. **Servo Motors**  
