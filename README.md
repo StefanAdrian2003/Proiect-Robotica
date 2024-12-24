@@ -26,7 +26,7 @@ Block Diagram
    The Arduino Uno is a microcontroller board based on the ATmega328P. It features 14 digital input/output pins, 6 analog inputs, a 16 MHz quartz crystal, and USB connectivity. It is the core of the project, coordinating all inputs and outputs.
 
 2. **L293D Motor Driver Module**  
-    The L293D motor driver module is an H-bridge-based driver that allows the control of DC motors in both forward and reverse directions. It enables the Arduino to manage the high current and voltage requirements of the motors safely. The module supports two DC motors or one stepper motor and includes built-in diodes for protection.
+   The L293D motor driver module is an H-bridge-based driver that allows the control of DC motors in both forward and reverse directions. It enables the Arduino to manage the high current and voltage requirements of the motors safely. The module supports two DC motors or one stepper motor and includes built-in diodes for protection.
 
 3. **DC Motors**  
    The DC motors are used to drive the robotic mechanism. They are controlled via the Arduino through an H-bridge motor driver, enabling forward and reverse motion.
@@ -49,11 +49,11 @@ Block Diagram
 9. **9V Batteries**  
    The 9V batteries supply power to the L293D motor driver module.
 
-10. **1.5V Batteries**
-   The 1.5V batteries supply power to the system, including the L293D motor driver module and microcontroller.
+10. **1.5V Batteries**  
+    The 1.5V batteries supply power to the system, including the L293D motor driver module and microcontroller.
 
-12. **Servo Motors**  
-   The servo motors are used for precise movement, controlled via PWM signals from the Arduino. They are ideal for applications requiring fine control.
+11. **Servo Motors**  
+    The servo motors are used for precise movement, controlled via PWM signals from the Arduino. They are ideal for applications requiring fine control.
 
 ## Hardware Design
 TBD - This section will contain data about the components used in creating the project.
