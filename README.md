@@ -16,7 +16,8 @@ Parking can often be a challenging task, especially in tight or unfamiliar space
 This project combines hardware and software design to develop an accessible and user-friendly solution to enhance parking safety and convenience.
 
 ## Overview
-TBD - The block diagram will illustrate the robot's main hardware components, communication pathways (Bluetooth, WiFi), and software interactions.
+Block Diagram
+(https://github.com/StefanAdrian2003/Proiect-Robotica/blob/main/Images/Block_Diagram.png)
 
 ## Hardware Design
 TBD - This section will contain data about the components used in creating the project.
@@ -29,10 +30,6 @@ TBD - This section will document the robot's performance, including its speed, r
 
 ## Conclusions
 TBD - The conclusions will reflect on the challenges faced, solutions implemented, and potential improvements.
-
-## Journal
-### Day 1 (04.12.2024):
-Started the documentation.
 
 ## Source Code
 TBD
