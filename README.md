@@ -59,22 +59,22 @@ Block Diagram
 ### Bill of Materials (BoM)
 | Component       | Quantity       | Description       | Datasheet    |
 |----------------|----------------|----------------|----------------|
-| Arduino Uno R3                     | 1 |   Microcontroller for controlling the system.     | Row 1, Column 3 |
-| DC Motor                           | 4 |   It helps the robot move.                        | Row 1, Column 3 |
-| 250 kΩ Potentiometer               | 1 |   Used to adjust the contrast of the LCD display. | Row 1, Column 3 |
-| Ultrasonic Distance Sensor (4-pin) | 1 |   Measures distance by sending ultrasonic waves.  | Row 1, Column 3 |
-| LCD 16 x 2                         | 1 |   Is used to provide visual feedback.             | Row 1, Column 3 |
-| H-bridge Motor Driver              | 1 |   Allows the control of DC motors.                | Row 1, Column 3 |
-| Positional Micro Servo             | 2 |   Are used for precise movement.                  | Row 1, Column 3 |
-| Joystick                           | 1 |   Used to provide directional input.              | Row 1, Column 3 |
-| 330 Ω Resistor                     | 1 |   For limiting current and voltage division.      | Row 1, Column 3 |
-| 9V Battery                         | 2 |   Provides power for the H-bridge Motor Driver.   | Row 1, Column 3 |
-| 1.5V Battery                       | 4 |   Provides power for the Arduino Uno.             | Row 1, Column 3 |
-| 4 x AA battery holder              | 1 |   Holds the batteries.                            | Row 1, Column 3 |
-| Speaker                            | 1 |   Used to emit sound signals.                     | Row 1, Column 3 |
-| Breadboard Small                   | 2 |   For circuit assembly and prototyping.           | Row 1, Column 3 |
-| Breadboard Mini                    | 2 |   For circuit assembly and prototyping.           | Row 1, Column 3 |
-| Cables                             | 50+ | For circuit assembly and prototyping.           | Row 1, Column 3 |
+| Arduino Uno R3                     | 1 |   Microcontroller for controlling the system.     | [Link](https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf)|
+| DC Motor                           | 4 |   It helps the robot move.                        | [Link](https://www.contact-evolution.ch/files/DC_motors.pdf) |
+| 10 kΩ Potentiometer                | 1 |   Used to adjust the contrast of the LCD display. | [Link](https://components101.com/sites/default/files/component_datasheet/potentiometer%20datasheet.pdf) |
+| Ultrasonic Distance Sensor (4-pin) | 1 |   Measures distance by sending ultrasonic waves.  | [Link](https://docs.google.com/document/d/1Y-yZnNhMYy7rwhAgyL_pfa39RsB-x2qR4vP8saG73rE/edit?pli=1&tab=t.0) |
+| LCD 16 x 2                         | 1 |   Is used to provide visual feedback.             | [Link](https://components101.com/sites/default/files/component_datasheet/16x2%20LCD%20Datasheet.pdf) |
+| H-bridge Motor Driver              | 1 |   Allows the control of DC motors.                | [Link](https://www.ti.com/lit/ds/symlink/l293.pdf) |
+| Positional Micro Servo             | 2 |   Are used for precise movement.                  | [Link](https://components101.com/sites/default/files/component_datasheet/SG90%20Servo%20Motor%20Datasheet.pdf) |
+| Joystick                           | 1 |   Used to provide directional input.              | [Link](https://components101.com/sites/default/files/component_datasheet/Joystick%20Module.pdf) |
+| 330 Ω Resistor                     | 1 |   For limiting current and voltage division.      | N/A |
+| 9V Battery                         | 2 |   Provides power for the H-bridge Motor Driver.   | N/A |
+| 1.5V Battery                       | 4 |   Provides power for the Arduino Uno.             | N/A |
+| 4 x AA battery holder              | 1 |   Holds the batteries.                            | N/A |
+| Speaker                            | 1 |   Used to emit sound signals.                     | N/A |
+| Breadboard Small                   | 2 |   For circuit assembly and prototyping.           | N/A |
+| Breadboard Mini                    | 2 |   For circuit assembly and prototyping.           | N/A |
+| Cables                             | 50+ | For circuit assembly and prototyping.           | N/A |
   
 ## Software Design
 The software design for Romică is centered around efficient, reliable communication between the robot's hardware components and the end user. The project is developed using PlatformIO on Visual Studio Code, a robust and feature-rich environment for embedded systems development.
