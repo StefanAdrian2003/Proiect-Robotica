@@ -52,7 +52,7 @@ Block Diagram
 10. **1.5V Batteries**
    The 1.5V batteries supply power to the system, including the L293D motor driver module and microcontroller.
 
-11. **Servo Motors**  
+12. **Servo Motors**  
    The servo motors are used for precise movement, controlled via PWM signals from the Arduino. They are ideal for applications requiring fine control.
 
 ## Hardware Design
