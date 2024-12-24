@@ -22,6 +22,8 @@ Block Diagram
 
 ### Detailed Description of Hardware Functionality
 
+1. Microcontroller - Arduino Uno
+
 ## Hardware Design
 TBD - This section will contain data about the components used in creating the project.
   
