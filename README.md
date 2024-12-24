@@ -20,6 +20,8 @@ Block Diagram
 
 ![Block Diagram](https://github.com/StefanAdrian2003/Proiect-Robotica/blob/main/Images/Block_Diagram.png)
 
+### Detailed Description of Hardware Functionality
+
 ## Hardware Design
 TBD - This section will contain data about the components used in creating the project.
   
