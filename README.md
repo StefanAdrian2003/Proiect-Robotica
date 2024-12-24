@@ -59,9 +59,22 @@ Block Diagram
 ### Bill of Materials (BoM)
 | Component       | Quantity       | Description       | Datasheet    |
 |----------------|----------------|----------------|----------------|
-| Row 1, Column 1 | Row 1, Column 2 | Row 1, Column 3 | Row 1, Column 3 |
-| Row 2, Column 1 | Row 2, Column 2 | Row 2, Column 3 | Row 1, Column 3 |
-| Row 3, Column 1 | Row 3, Column 2 | Row 3, Column 3 | Row 1, Column 3 |
+| Arduino Uno R3                     | 1 |   Microcontroller for controlling the system.     | Row 1, Column 3 |
+| DC Motor                           | 4 |   It helps the robot move.                        | Row 1, Column 3 |
+| 250 kΩ Potentiometer               | 1 |   Used to adjust the contrast of the LCD display. | Row 1, Column 3 |
+| Ultrasonic Distance Sensor (4-pin) | 1 |   Measures distance by sending ultrasonic waves.  | Row 1, Column 3 |
+| LCD 16 x 2                         | 1 |   Is used to provide visual feedback.             | Row 1, Column 3 |
+| H-bridge Motor Driver              | 1 |   Allows the control of DC motors.                | Row 1, Column 3 |
+| Positional Micro Servo             | 2 |   Are used for precise movement.                  | Row 1, Column 3 |
+| Joystick                           | 1 |   Used to provide directional input.              | Row 1, Column 3 |
+| 330 Ω Resistor                     | 1 |   For limiting current and voltage division.      | Row 1, Column 3 |
+| 9V Battery                         | 2 |   Provides power for the H-bridge Motor Driver.   | Row 1, Column 3 |
+| 1.5V Battery                       | 4 |   Provides power for the Arduino Uno.             | Row 1, Column 3 |
+| 4 x AA battery holder              | 1 |   Holds the batteries.                            | Row 1, Column 3 |
+| Speaker                            | 1 |   Used to emit sound signals.                     | Row 1, Column 3 |
+| Breadboard Small                   | 2 |   For circuit assembly and prototyping.           | Row 1, Column 3 |
+| Breadboard Mini                    | 2 |   For circuit assembly and prototyping.           | Row 1, Column 3 |
+| Cables                             | 50+ | For circuit assembly and prototyping.           | Row 1, Column 3 |
   
 ## Software Design
 The software design for Romică is centered around efficient, reliable communication between the robot's hardware components and the end user. The project is developed using PlatformIO on Visual Studio Code, a robust and feature-rich environment for embedded systems development.
