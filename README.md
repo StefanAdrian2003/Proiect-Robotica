@@ -22,7 +22,36 @@ Block Diagram
 
 ### Detailed Description of Hardware Functionality
 
-#### 1. Microcontroller - Arduino Uno
+1. **Microcontroller - Arduino Uno**  
+   The Arduino Uno is a microcontroller board based on the ATmega328P. It features 14 digital input/output pins, 6 analog inputs, a 16 MHz quartz crystal, and USB connectivity. It is the core of the project, coordinating all inputs and outputs.
+
+2. **Joystick**  
+   The joystick is used to provide directional input. It works by reading analog values from its X and Y axes, allowing the user to control movement or navigation.
+
+3. **DC Motors**  
+   The DC motors are used to drive the robotic mechanism. They are controlled via the Arduino through an H-bridge motor driver, enabling forward and reverse motion.
+
+4. **Ultrasonic Sensor**  
+   The ultrasonic sensor measures distance by sending ultrasonic waves and detecting their reflection. It is used for obstacle detection and navigation.
+
+5. **LCD Display**  
+   The LCD display is used to provide visual feedback, such as sensor readings or status messages. It connects to the Arduino and communicates via I2C for simplified wiring.
+
+6. **Buzzer**  
+   The buzzer is used to emit sound signals, acting as an alert mechanism or for providing audio feedback in the system.
+
+7. **9V Batteries**  
+   The 9V batteries supply power to the system, including the motors and microcontroller.
+
+8. **Servo Motors**  
+   The servo motors are used for precise movement, controlled via PWM signals from the Arduino. They are ideal for applications requiring fine control.
+
+9. **Push Buttons**  
+   The push buttons are used as user input to trigger specific actions or events in the system.
+
+10. **L293D Motor Driver Module**  
+    The L293D motor driver module is an H-bridge-based driver that allows the control of DC motors in both forward and reverse directions. It enables the Arduino to manage the high current and voltage requirements of the motors safely. The module supports two DC motors or one stepper motor and includes built-in diodes for protection.
+
 
 ## Hardware Design
 TBD - This section will contain data about the components used in creating the project.
