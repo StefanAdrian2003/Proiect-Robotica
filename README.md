@@ -87,46 +87,50 @@ Block Diagram
 | Component      | Pin Name       | Connected to   |
 |----------------|----------------|----------------|
 |Ultrasonic Sensor |VCC            |5V              |
-|                  |TRIG           |6               |
-|                  |ECHO           |5               |
+|                  |TRIG           |6 pin           |
+|                  |ECHO           |5 pin           |
 |                  |GND            |GND             |
-|Servo Motor1      |PWM            |4               |
+|Servo Motor1      |PWM            |4 pin           |
 |                  |+              |5V from Arduino |
 |                  |-              |GND             |
-|Servo Motor2      |PWM            |2               |
+|Servo Motor2      |PWM            |2 pin           |
 |                  |+              |5V from Arduino |
 |                  |-              |GND             |
-|Speaker           |+              |3               |
+|Speaker           |+              |3 pin           |
 |                  |-              |GND             |
 |L293D             |1,2EN          |5V from Arduino                      |
-|                  |INPUT 1        |13                                   |
+|                  |INPUT 1        |13 pin                               |
 |                  |OUTPUT 1       |DC Motor(Front-left and Back-left)   |
 |                  |GND1           |GND                                  |
 |                  |GND2           |GND                                  |
 |                  |OUTPUT 2       |DC Motor(Front-left and Back-left)   |
-|                  |INPUT 2        |12                                   |
+|                  |INPUT 2        |12 pin                               |
 |                  |VCC2           |18V from batteries                   |
 |                  |3,4EN          |5V from Arduino                      |
-|                  |INPUT 3        |11                                   |
+|                  |INPUT 3        |11 pin                               |
 |                  |OUTPUT 3       |DC Motor(Front-right and Back-right) |
 |                  |GND3           |GND                                  |
 |                  |GND4           |GND                                  |
 |                  |OUTPUT 4       |DC Motor(Front-right and Back-right) |
-|                  |INPUT 4        |10                                   |
+|                  |INPUT 4        |10 pin                               |
 |                  |VCC1           |5V from Arduino                      |
-|LCD Display       |VSS       |GND                  |
-|                  |VDD       |5V from Arduino      |
-|                  |V0        |Potentiometer        |
-|                  |RS        |8                    |
-|                  |RW        |GND                  |
-|                  |E         |7                    |
-|                  |D4        |A2                   |
-|                  |D5        |A3                   |
-|                  |D6        |A4                   |
-|                  |D7        |A5                   |
-|                  |A         |5V with 330 resistor |
-|                  |K         |GND                  |
-
+|LCD Display       |VSS            |GND                  |
+|                  |VDD            |5V from Arduino      |
+|                  |V0             |Potentiometer        |
+|                  |RS             |8 pin                |
+|                  |RW             |GND                  |
+|                  |E              |7 pin                |
+|                  |D4             |A2 pin               |
+|                  |D5             |A3 pin               |
+|                  |D6             |A4 pin               |
+|                  |D7             |A5 pin               |
+|                  |A              |5V with 330 resistor |
+|                  |K              |GND                  |
+|Joystick          |GND            |GND                  |
+|                  |+5V            |5V from Arduino      |
+|                  |VAx            |A0 pin               |
+|                  |VAy            |A1 pin               |
+|                  |SW             |9 pin                |
 
 ## Software Design
 The software design for Romică is centered around efficient, reliable communication between the robot's hardware components and the end user. The project is developed using PlatformIO on Visual Studio Code, a robust and feature-rich environment for embedded systems development.
