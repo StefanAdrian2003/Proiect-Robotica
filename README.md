@@ -174,7 +174,7 @@ These libraries were chosen for their compatibility with Arduino, low memory foo
 
 ---
 
-## Justification of Laboratory Functionalities
+### Justification of Laboratory Functionalities
 The implementation leverages laboratory components such as:  
 - **Ultrasonic Sensors**:  
    - Tested for accurate distance measurement within 2 cm to 400 cm range.  
@@ -185,7 +185,6 @@ The implementation leverages laboratory components such as:
 
 These functionalities were validated to ensure compliance with the project's objectives.  
 
----
 
 ## Project Framework and Interaction Between Functionalities
 ### Project Skeleton:  
@@ -206,15 +205,15 @@ These functionalities were validated to ensure compliance with the project's obj
 
 All modules interact seamlessly to ensure smooth operation in both manual and parking-assistance modes.  
 
----
-
 ## Video Demo and Validation
 A **video demonstration** of the entire project is available on GitHub. It includes:  
 1. **Manual Mode**: Navigation using the joystick.  
 2. **Parking Assistance Mode**: Automated distance-based alerts and motor control.  
 3. **Real-Time Feedback**: Clear audio and visual cues to users.  
 
-The video validates that all functionalities operate according to project specifications.  
+The video validates that all functionalities operate according to project specifications.
+
+adding video soon (TBD)
 
 ---
 
@@ -229,7 +228,6 @@ The video validates that all functionalities operate according to project specif
 
 These calibration processes were repeated until desired accuracy and performance were achieved.  
 
----
 
 ## Optimization Details
 ### Areas of Optimization:
