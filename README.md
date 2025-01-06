@@ -135,7 +135,7 @@ Block Diagram
 ## Software Design
 The software design for Romică is centered around efficient, reliable communication between the robot's hardware components and the end user. The project is developed using PlatformIO on Visual Studio Code, a robust and feature-rich environment for embedded systems development.
 
-
+---
 
 ### Current State of Software Implementation
 The software implementation for **Romică** is fully functional, integrating the following:  
@@ -173,6 +173,79 @@ These libraries were chosen for their compatibility with Arduino, low memory foo
   - Efficient use of Arduino Uno's I/O pins without additional expansion boards.  
 
 ---
+
+## Justification of Laboratory Functionalities
+The implementation leverages laboratory components such as:  
+- **Ultrasonic Sensors**:  
+   - Tested for accurate distance measurement within 2 cm to 400 cm range.  
+- **DC Motors with H-Bridge Driver**:  
+   - Provide forward/reverse control for robot movement, validated using oscilloscopes for signal integrity.  
+- **16x2 LCD**:  
+   - Used to display real-time distance and mode status for debugging during the development phase.  
+
+These functionalities were validated to ensure compliance with the project's objectives.  
+
+---
+
+## Project Framework and Interaction Between Functionalities
+### Project Skeleton:  
+- **Input Components**:  
+   - Joystick (X/Y Axis, Button)  
+   - Ultrasonic Distance Sensor  
+- **Processing**:  
+   - Arduino Uno acts as the control unit, processing inputs and coordinating outputs.  
+- **Output Components**:  
+   - DC Motors (Movement Control)  
+   - LCD Display (Status Updates)  
+   - Speaker (Proximity Alerts)  
+
+### Interaction Between Functionalities:  
+- **Joystick Input**: Translates analog values into motor commands.  
+- **Ultrasonic Sensor**: Sends distance data, used to stop motors when obstacles are near.  
+- **LCD and Speaker**: Work together to provide real-time feedback to users.  
+
+All modules interact seamlessly to ensure smooth operation in both manual and parking-assistance modes.  
+
+---
+
+## Video Demo and Validation
+A **video demonstration** of the entire project is available on GitHub. It includes:  
+1. **Manual Mode**: Navigation using the joystick.  
+2. **Parking Assistance Mode**: Automated distance-based alerts and motor control.  
+3. **Real-Time Feedback**: Clear audio and visual cues to users.  
+
+The video validates that all functionalities operate according to project specifications.  
+
+---
+
+## Sensor Calibration Process
+### Calibration Steps:
+1. **Ultrasonic Sensor**:  
+   - Measured distance at fixed intervals (10 cm, 20 cm, etc.) and adjusted timing calculations in software.  
+2. **Servo Motors**:  
+   - Used PWM signals with fine adjustments to achieve precise angle rotations.  
+3. **LCD Display Contrast**:  
+   - Tuned the potentiometer for optimal visibility under various lighting conditions.  
+
+These calibration processes were repeated until desired accuracy and performance were achieved.  
+
+---
+
+## Optimization Details
+### Areas of Optimization:
+1. **Memory Usage**:  
+   - Unused libraries and global variables were removed to free up SRAM.  
+2. **Power Efficiency**:  
+   - Optimized motor control to reduce unnecessary power consumption during idle states.  
+3. **Debounce Logic**:  
+   - Refined code to ensure button presses are accurately detected without delay.  
+4. **Audio Feedback**:  
+   - Adjusted tone duration and frequencies for clearer signals without overlapping.  
+
+### Outcome of Optimizations:
+- Reduced response times in manual and parking modes.  
+- Increased overall system reliability and reduced noise from redundant operations.  
+
 
 ## Final Results
 TBD - This section will document the robot's performance, including its speed, responsiveness, and user feedback.
