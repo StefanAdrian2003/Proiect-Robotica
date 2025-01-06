@@ -146,6 +146,29 @@ The software implementation for **Romică** is fully functional, integrating the
 
 The software is implemented in **C++** using the **Arduino IDE** and compiled with the PlatformIO framework for efficiency.  
 
+### Libraries used
+1. **LiquidCrystal Library**:  
+   - Simplifies communication with the 16x2 LCD.  
+   - Provides robust methods for sending data to the display with minimal overhead.  
+2. **Servo and PWM Functions**:  
+   - Enable fine control of servo motors using precise PWM signals.  
+3. **Tone() for Speaker**:  
+   - Allows easy generation of audio signals for alerts.
+
+These libraries were chosen for their compatibility with Arduino, low memory footprint, and ease of integration into embedded systems.  
+---
+
+### Innovation Highlights
+- **Dual Mode Functionality**:  
+  - Romică supports both **manual control via joystick** and **automatic parking assistance**.  
+- **Real-Time Distance Feedback**:  
+  - Combines **visual (LCD)** and **auditory (speaker)** signals to guide users effectively.  
+- **Custom Debounce Implementation**:  
+  - Avoids false triggers from the joystick button, ensuring reliability.  
+- **Compact Hardware Integration**:  
+  - Efficient use of Arduino Uno's I/O pins without additional expansion boards.  
+
+---
 
 ## Final Results
 TBD - This section will document the robot's performance, including its speed, responsiveness, and user feedback.
