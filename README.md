@@ -215,7 +215,6 @@ The video validates that all functionalities operate according to project specif
 
 adding video soon (TBD)
 
----
 
 ## Sensor Calibration Process
 ### Calibration Steps:
