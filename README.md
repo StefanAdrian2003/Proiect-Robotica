@@ -136,6 +136,7 @@ Block Diagram
 The software design for Romică is centered around efficient, reliable communication between the robot's hardware components and the end user. The project is developed using PlatformIO on Visual Studio Code, a robust and feature-rich environment for embedded systems development.
 
 
+
 ### Current State of Software Implementation
 The software implementation for **Romică** is fully functional, integrating the following:  
 - **Joystick Control**: Real-time navigation commands sent to motors.  
@@ -145,6 +146,8 @@ The software implementation for **Romică** is fully functional, integrating the
 - **Debounce Logic**: Ensures reliable button presses to toggle between parking and manual modes.  
 
 The software is implemented in **C++** using the **Arduino IDE** and compiled with the PlatformIO framework for efficiency.  
+
+---
 
 ### Libraries used
 1. **LiquidCrystal Library**:  
@@ -156,6 +159,7 @@ The software is implemented in **C++** using the **Arduino IDE** and compiled wi
    - Allows easy generation of audio signals for alerts.
 
 These libraries were chosen for their compatibility with Arduino, low memory footprint, and ease of integration into embedded systems.  
+
 ---
 
 ### Innovation Highlights
