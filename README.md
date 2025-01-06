@@ -142,9 +142,6 @@ TBD - This section will document the robot's performance, including its speed, r
 TBD - The conclusions will reflect on the challenges faced, solutions implemented, and potential improvements.
 
 ## Source Code
-# Arduino Parking Assistant
-
-This is the source code for an Arduino-based parking assistant project.
 
 ```cpp
 #include <Arduino.h>
@@ -338,7 +335,7 @@ void loop()
       }
   }
 }
-
+```
 
 ## Resources
 TBD
