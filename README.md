@@ -142,7 +142,203 @@ TBD - This section will document the robot's performance, including its speed, r
 TBD - The conclusions will reflect on the challenges faced, solutions implemented, and potential improvements.
 
 ## Source Code
-TBD
+# Arduino Parking Assistant
+
+This is the source code for an Arduino-based parking assistant project.
+
+```cpp
+#include <Arduino.h>
+#include <LiquidCrystal.h>
+
+// Initialize the library with RS, E, D4, D5, D6, D7
+LiquidCrystal lcd(8, 7, A2, A3, A4, A5);
+
+const int Forward_L = 13;
+const int Backward_L = 12;
+const int Forward_R = 11;
+const int Backward_R = 10;
+
+const int SW_pin = 9;
+const int X_pin = A0;
+const int Y_pin = A1;
+
+const int trig = 6;
+const int echo = 5;
+
+const int speaker = 3;
+
+int ParkingOn = -1;
+
+void setup()
+{
+  lcd.begin(16, 2);
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Salut!");
+  lcd.setCursor(0, 1);
+  lcd.print("Sunt Romica!");
+
+  pinMode(Forward_R, OUTPUT);
+  pinMode(Backward_R, OUTPUT);
+  pinMode(Forward_L, OUTPUT);
+  pinMode(Backward_L, OUTPUT);
+
+  pinMode(trig, OUTPUT);
+  pinMode(echo, INPUT);
+
+  pinMode(SW_pin, INPUT);
+  digitalWrite(SW_pin, HIGH);
+
+  pinMode(speaker, OUTPUT);
+
+  Serial.begin(115200);
+}
+
+bool debounce(int buton)
+{
+    int lastButtonState = LOW;
+    unsigned long lastDebounceTime = 0;
+    unsigned long debounceDelay = 100;
+
+    while(1) {
+        int reading = digitalRead(buton);
+
+        if (reading != lastButtonState) {
+          lastDebounceTime = millis();
+        }
+
+        if ((millis() - lastDebounceTime) > debounceDelay) {
+          if(reading == HIGH)
+            return 1;
+
+        }
+        lastButtonState = reading;
+    }
+    return 0;
+}
+
+void loop()
+{
+  if (digitalRead(SW_pin) == LOW)
+  {
+      debounce(SW_pin);
+      ParkingOn *= -1;
+      lcd.clear();
+  }
+
+  if (ParkingOn == -1)
+  {
+    lcd.setCursor(0, 0);
+    lcd.print("Salut!");
+    lcd.setCursor(0, 1);
+    lcd.print("Sunt Romica!");
+
+    int X = analogRead(X_pin);
+    int Y = analogRead(Y_pin);
+
+    if (X < 400)
+    {
+      digitalWrite(Forward_L, LOW);
+      digitalWrite(Forward_R, HIGH);
+      digitalWrite(Backward_L, HIGH);
+      digitalWrite(Backward_R, LOW);
+    }
+    else if (X > 600)
+    {
+      digitalWrite(Forward_L, HIGH);
+      digitalWrite(Forward_R, LOW);
+      digitalWrite(Backward_L, LOW);
+      digitalWrite(Backward_R, HIGH);
+    }
+    else if (Y < 400)
+    {
+      digitalWrite(Forward_L, HIGH);
+      digitalWrite(Forward_R, HIGH);
+      digitalWrite(Backward_L, LOW);
+      digitalWrite(Backward_R, LOW);
+    }
+    else if (Y > 600)
+    {
+      digitalWrite(Forward_L, LOW);
+      digitalWrite(Forward_R, LOW);
+      digitalWrite(Backward_L, HIGH);
+      digitalWrite(Backward_R, HIGH);
+    }
+
+    if (X > 400 && X < 600 && Y > 400 && Y < 600)
+    {
+      digitalWrite(Forward_L, LOW);
+      digitalWrite(Forward_R, LOW);
+      digitalWrite(Backward_L, LOW);
+      digitalWrite(Backward_R, LOW);
+    }
+  }
+  else
+  {
+      // Trigger the ultrasonic sensor
+      digitalWrite(trig, LOW);
+      delayMicroseconds(2);
+      digitalWrite(trig, HIGH);
+      delayMicroseconds(10);
+      digitalWrite(trig, LOW);
+
+      // Measure the echo time
+      long duration = pulseIn(echo, HIGH);
+
+      // Calculate the distance in centimeters
+      int distance = duration * 0.034 / 2;
+
+      // Print the distance to the Serial Monitor
+      lcd.setCursor(0, 0);
+      lcd.print("Distance: ");
+      lcd.print(distance);
+      lcd.print(" cm");
+
+      // Optional: Add logic based on distance
+      if (distance < 10)
+      {
+          lcd.clear();
+          ParkingOn *= -1;
+          lcd.setCursor(0, 0);
+          lcd.print("Felicitari! Ai");
+          lcd.setCursor(0, 1);
+          lcd.print("parcat bine!");
+          delay(5000);
+          lcd.clear();
+      }
+      else if (distance >= 10 && distance < 20)
+      {
+          lcd.setCursor(0, 1);
+          lcd.print("Inca putin!    ");
+          tone(speaker, 800);
+          delay(100);        
+          noTone(speaker);
+      }
+      else if (distance >= 20 && distance < 30)
+      {
+          lcd.setCursor(0, 1);
+          lcd.print("Inca putin!    ");
+          tone(speaker, 800);
+          delay(300);        
+          noTone(speaker);
+      }
+      else if (distance >= 30 && distance < 50)
+      {
+          lcd.setCursor(0, 1);
+          lcd.print("Inca putin!    ");
+          tone(speaker, 800); 
+          delay(500);         
+          noTone(speaker);
+      }
+      else
+      {
+          lcd.setCursor(0, 1);
+          lcd.print("dai tare!      ");
+          noTone(speaker); // Stop the tone when distance is greater
+      }
+  }
+}
+
 
 ## Resources
 TBD
