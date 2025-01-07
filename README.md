@@ -213,7 +213,6 @@ A **video demonstration** of the entire project is available on GitHub. It inclu
 
 The video validates that all functionalities operate according to project specifications.
 
-adding video soon (TBD)
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/NKW6tdk5dF4/0.jpg)](https://www.youtube.com/shorts/NKW6tdk5dF4)
 
 
