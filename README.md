@@ -255,6 +255,8 @@ TBD - The conclusions will reflect on the challenges faced, solutions implemente
 ```cpp
 #include <Arduino.h>
 #include <LiquidCrystal.h>
+#include <Servo.h>
+
 
 // Initialize the library with RS, E, D4, D5, D6, D7
 LiquidCrystal lcd(8, 7, A2, A3, A4, A5);
@@ -275,8 +277,20 @@ const int speaker = 3;
 
 int ParkingOn = -1;
 
+
+Servo Left, Right;
+int currentTime;
+int FirstTime;
+bool position = true;
+
 void setup()
 {
+  Left.attach(4);
+  Right.attach(2);
+
+  Left.write(0);
+  Right.write(180);
+
   lcd.begin(16, 2);
   lcd.clear();
   lcd.setCursor(0, 0);
@@ -334,6 +348,8 @@ void loop()
 
   if (ParkingOn == -1)
   {
+    FirstTime = 1;
+
     lcd.setCursor(0, 0);
     lcd.print("Salut!");
     lcd.setCursor(0, 1);
@@ -381,6 +397,28 @@ void loop()
   }
   else
   {
+      if(FirstTime == 1)
+      {
+        currentTime = millis();
+        FirstTime = 0;
+      }      
+
+      if(millis() - currentTime > 1000)
+      {
+          if(!position)
+          {
+            Left.write(0);
+            Right.write(180);
+          }
+          else
+          {
+            Left.write(90);
+            Right.write(90);
+          }
+          currentTime = millis();
+          position = !position;
+      }
+
       // Trigger the ultrasonic sensor
       digitalWrite(trig, LOW);
       delayMicroseconds(2);
@@ -406,9 +444,9 @@ void loop()
           lcd.clear();
           ParkingOn *= -1;
           lcd.setCursor(0, 0);
-          lcd.print("Felicitari! Ai");
+          lcd.print("Felicitari! Ai p");
           lcd.setCursor(0, 1);
-          lcd.print("parcat bine!");
+          lcd.print("arcat ca un bou!");
           delay(5000);
           lcd.clear();
       }
@@ -416,34 +454,36 @@ void loop()
       {
           lcd.setCursor(0, 1);
           lcd.print("Inca putin!    ");
-          tone(speaker, 800);
-          delay(100);        
-          noTone(speaker);
+		  tone(speaker, 800); // High-frequency tone
+      	  delay(100);          // Short delay
+      	  noTone(speaker);
       }
-      else if (distance >= 20 && distance < 30)
+	  else if (distance >= 20 && distance < 30)
       {
           lcd.setCursor(0, 1);
           lcd.print("Inca putin!    ");
-          tone(speaker, 800);
-          delay(300);        
-          noTone(speaker);
+		  tone(speaker, 800); // Medium-frequency tone
+      	  delay(300);         // Medium delay
+      	  noTone(speaker);
       }
-      else if (distance >= 30 && distance < 50)
+	  else if (distance >= 30 && distance < 50)
       {
           lcd.setCursor(0, 1);
           lcd.print("Inca putin!    ");
-          tone(speaker, 800); 
-          delay(500);         
+		  tone(speaker, 800); // Low-frequency tone
+          delay(500);         // Long delay
           noTone(speaker);
       }
       else
       {
           lcd.setCursor(0, 1);
           lcd.print("dai tare!      ");
-          noTone(speaker); // Stop the tone when distance is greater
+		  noTone(speaker); // Stop the tone when distance is greater
       }
+
   }
 }
+
 ```
 
 ## Resources
