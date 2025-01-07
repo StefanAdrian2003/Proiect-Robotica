@@ -245,10 +245,15 @@ These calibration processes were repeated until desired accuracy and performance
 
 
 ## Final Results
-TBD - This section will document the robot's performance, including its speed, responsiveness, and user feedback.
+The **Romică project** successfully achieves its primary objectives:  
+- Seamless **manual control** via joystick for real-time navigation.  
+- Reliable **parking assistance mode**, combining ultrasonic sensors, LCD, and speaker feedback for obstacle detection.  
+- Fully calibrated and optimized system with minimal power consumption and high reliability.  
 
 ## Conclusions
-TBD - The conclusions will reflect on the challenges faced, solutions implemented, and potential improvements.
+The project demonstrates a well-rounded embedded systems implementation using Arduino, showcasing innovation in design and efficient use of hardware components.  
+- All functionalities work as intended, validated through multiple test scenarios and video demonstrations.  
+- The project is user-friendly, cost-effective, and serves as an excellent example of combining robotics and IoT concepts.  
 
 ## Source Code
 
